@@ -23,7 +23,7 @@ input {
 button {
     display:inline-block;
     padding: 0.5em;
-    width: 30em;
+    width: 100%;
     border: 0.1em solid #000;
     background-color: #f9f9f9;
     border-radius:1em;
