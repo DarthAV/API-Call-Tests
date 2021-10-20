@@ -22,31 +22,31 @@ function requestAPICall() {
         return
     }
 
-    //Update API url with inputs
+    //Update API url with parameters
     APIurl += `${currencyFrom}/${currencyTo}/${amountConverting}/`
 
     //API request
     callAPI(APIurl)
 
-
 }
 
 async function callAPI(APIurl) {
-    //ensure no crashes when calling API
     try {
+        //call API
         APIResponse = await fetch(APIurl)
         response = await APIResponse.json()
 
+        //send error alert
         if (response["result"] == "error") {
             alert("Could not validate inputted currency")
             return
         }
 
-        conversionRate = response["conversion_rate"]
-        conversionResult = response["conversion_result"]
-        document.getElementById("exchangeRate").value = conversionRate
-        document.getElementById("convertedAmount").value = conversionResult
+        //edit webpage to display values
+        document.getElementById("exchangeRate").value = response["conversion_rate"]
+        document.getElementById("convertedAmount").value = response["conversion_result"]
     } catch (error) {
+        //ensure no crashes when calling API
         alert("Error: Could not reach currency exchange API")
     }
 }
