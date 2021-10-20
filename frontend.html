@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="English">
+
+
+<head>
+    <meta charset="utf-8">
+    <title>Convert Currencies</title>
+</head>
+
+<body>
+    <h1>Convert Currencies</h1>
+    <p>Convert between any two currencies</p>
+    <div>
+        <div>
+            <label>From:</label>
+            <input id="currencyFrom" placeholder="Eg. USD" value="usd">
+        </div>
+        <div>
+            <label>To:</label>
+            <input id="currencyTo" placeholder="Eg. JPY" value="jPy">
+        </div>
+        <div>
+            <label>Amount:</label>
+            <input id="amountConverting" placeholder="Eg. 5.23" value=3>
+        </div>
+        <br>
+        <button onclick="requestAPICall()">Click to convert</button>
+        <div>
+            <label>Exchange Rate:</label>
+            <input id="exchangeRate" disabled=true>
+        </div>
+        <div>
+            <label>Converted Amount:</label>
+            <input id="convertedAmount" disabled=true>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="./backend.js"></script>
