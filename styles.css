@@ -1,0 +1,36 @@
+html *
+{
+   color: #000;
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe Variable', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+h1, p {
+    text-align: center;
+}
+div {
+    margin:1em;
+    float: left;
+}
+
+input {
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+  resize: vertical;
+}
+
+
+button {
+    display:inline-block;
+    padding: 0.5em;
+    width: 30em;
+    border: 0.1em solid #000;
+    background-color: #f9f9f9;
+    border-radius:1em;
+    box-sizing: border-box;
+    text-align:center;
+    transition: all 0.1s;
+}
+button:active {
+    border: 0.1em solid #999;
+}
