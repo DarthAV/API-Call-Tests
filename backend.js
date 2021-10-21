@@ -8,19 +8,13 @@ function requestAPICall() {
     APIurl = `https://v6.exchangerate-api.com/v6/${superSecretAPIKey}/pair/`
 
     //Gets which currency they want to convert from
-    currencyFrom = document.getElementById("currencyFrom").value.toUpperCase() //prompt("What currency would you like to convert from?").toUpperCase()
+    currencyFrom = document.getElementById("currencyFrom").value.toUpperCase()
 
     //Gets which currency they want to convert to
-    currencyTo = document.getElementById("currencyTo").value.toUpperCase() //"JPY"
+    currencyTo = document.getElementById("currencyTo").value.toUpperCase()
 
     //Gets how much they would like to convert
-    amountConverting = document.getElementById("amountConverting").value.toUpperCase().replace(',', '') //prompt("How much of this currency would you like to convert?").replaceAll(',', '');
-
-    //validate inputs
-    while (!/^[0-9]+$||^[0-9]+.[0-9]+$/.test(amountConverting)) {
-        alert("You did not enter a properly formatted number.")
-        return
-    }
+    amountConverting = document.getElementById("amountConverting").value.toUpperCase().replace(',', '')
 
     //Update API url with parameters
     APIurl += `${currencyFrom}/${currencyTo}/${amountConverting}/`
