@@ -7,10 +7,22 @@ html *
 h1, p {
     text-align: center;
 }
-div {
+
+.item {
     margin:1em;
     float: left;
 }
+
+.mainElement {
+     display: flex; 
+     flex-direction: column; 
+ }
+
+.subElement {
+     display: flex; 
+     flex-direction: row; 
+     justify-content: space-evenly;
+ }
 
 input {
   padding: 1em;

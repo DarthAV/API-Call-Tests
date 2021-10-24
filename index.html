@@ -12,29 +12,34 @@
 <body>
     <h1>Convert Currencies</h1>
     <p>Convert between any two currencies</p>
-    <div>
-        <div>
-            <label>From:</label>
-            <input id="currencyFrom" placeholder="Eg. USD">
+
+    <div class="mainElement">
+        <div class="subElement">
+            <div class="item">
+                <label>From:</label>
+                <input id="currencyFrom" placeholder="Eg. USD">
+            </div>
+            <div class="item">
+                <label>To:</label>
+                <input id="currencyTo" placeholder="Eg. JPY">
+            </div>
+            <div class="item">
+                <label>Amount:</label>
+                <input type="number" min="0" id="amountConverting" placeholder="Eg. 5.23">
+            </div>
         </div>
-        <div>
-            <label>To:</label>
-            <input id="currencyTo" placeholder="Eg. JPY">
+        <div class="subElement">
+            <button class="item" onclick="requestAPICall()">Click to convert</button>
         </div>
-        <div>
-            <label>Amount:</label>
-            <input type="number" id="amountConverting" placeholder="Eg. 5.23">
-        </div>
-        <br>
-        <button onclick="requestAPICall()">Click to convert</button>
-        <br>
-        <div>
-            <label>Exchange Rate:</label>
-            <input id="exchangeRate" disabled=true>
-        </div>
-        <div>
-            <label>Converted Amount:</label>
-            <input id="convertedAmount" disabled=true>
+        <div class="subElement">
+            <div class="item">
+                <label>Exchange Rate:</label>
+                <input id="exchangeRate" disabled=true>
+            </div>
+            <div class="item">
+                <label>Converted Amount:</label>
+                <input id="convertedAmount" disabled=true>
+            </div>
         </div>
     </div>
 </body>
