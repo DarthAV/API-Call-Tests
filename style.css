@@ -16,6 +16,8 @@ h1, p {
 .mainElement {
      display: flex; 
      flex-direction: column; 
+     width: 70%;
+     margin: auto;
  }
 
 .subElement {
